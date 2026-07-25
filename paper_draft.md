@@ -125,6 +125,10 @@ Around every reported AUC we provide a 95% **percentile bootstrap confidence int
 
 All experiments use a fixed random seed (42) for sampling, train/validation/test splitting, and bootstrap resampling, ensuring reproducibility of the reported numbers from the released code.
 
+### 3.5 AI Use Disclosure
+
+The authors used AI assistance (Claude) throughout this project's development, including implementation and debugging of the specialized knowledge tracing models (BKT, DKT, SAKT, AKT) and the multi-provider LLM evaluation pipeline; statistical analysis, including bootstrap confidence intervals, calibration metrics, and cost calculations; independent verification of literature citations; and drafting and revision of the manuscript text. All AI-assisted code, analyses, and text were reviewed and verified by the authors, who take full responsibility for the accuracy, integrity, and scientific validity of the final manuscript.
+
 ---
 
 ## 4. Results

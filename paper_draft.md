@@ -1,6 +1,6 @@
 # Can LLMs Replace Knowledge Tracing Models? A Multi-Provider Benchmark on ASSISTments-2009
 
-**Target venue:** AIED 2026 / EDM 2026 / LAK 2026 / *Computers & Education* (special issue on AI)
+**Target venue:** *Education and Information Technologies* (Springer). Backup: *International Journal of Educational Technology in Higher Education* (SpringerOpen).
 
 ---
 

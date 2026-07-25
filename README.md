@@ -30,8 +30,10 @@ kt_benchmark/
 │   ├── figure_4_2_*.png              # calibration, cost frontier, distributions (paper §4.2)
 │   ├── llm_predictions_*.jsonl       # resumable per-call checkpoints
 │   └── raw_predictions.npz           # raw (preds, labels) for downstream analysis
-├── make_figure.py            # Regenerates results/benchmark_results.png from kt_results.json
-├── make_cost_frontier.py     # Regenerates results/figure_4_2_cost_frontier.png from Table 2
+├── make_figure.py                    # Regenerates results/benchmark_results.png from kt_results.json
+├── make_cost_frontier.py             # Regenerates results/figure_4_2_cost_frontier.png from Table 2
+├── make_calibration_steps_figure.py  # Regenerates results/figure_4_2_calibration_and_steps.png from llm_predictions_*.jsonl
+├── make_distributions_figure.py      # Regenerates results/figure_4_2_distributions.png from llm_predictions_*.jsonl
 ├── run_benchmark.py          # Main orchestrator
 ├── paper_draft.md            # Full manuscript draft
 └── submission/                # cover_letter.docx, manuscript.docx, title_page.docx

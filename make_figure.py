@@ -100,7 +100,7 @@ def main():
     fig.suptitle('Knowledge Tracing Benchmark: Specialized KT vs. LLMs',
                  fontsize=13, fontweight='bold')
     plt.tight_layout()
-    plt.savefig(OUT, dpi=150, bbox_inches='tight')
+    plt.savefig(OUT, dpi=600, bbox_inches='tight')
     print(f"Figure saved to {OUT}")
     return OUT
 

@@ -50,5 +50,5 @@ llm_handle = plt.Line2D([0], [0], marker='^', color='w', markerfacecolor='#dc262
 ax.legend(handles=[kt_handle, llm_handle], loc='lower right')
 
 plt.tight_layout()
-plt.savefig(OUT, dpi=150, bbox_inches='tight')
+plt.savefig(OUT, dpi=600, bbox_inches='tight')
 print(f"Figure saved to {OUT}")

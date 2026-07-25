@@ -173,7 +173,7 @@ Figure 2 (right panel) shows a reliability diagram for all four LLM conditions, 
 
 The Expected Calibration Error (ECE) summarises this miscalibration as a single number: 0.119 for Haiku zero-shot, 0.101 for Haiku few-shot, 0.123 for GPT-4o-mini zero-shot, 0.122 for GPT-4o-mini few-shot. Brier scores cluster around 0.21 across all four conditions. Practically, this means a tutoring system using "P(correct) < 0.5" as a remediation trigger would intervene roughly 1.5 times as often as it should when relying on LLM predictions, since many students whose true correct rate exceeds 0.5 are assigned LLM probabilities below it.
 
-*Figure 2. Left: per-position AUC pooled across all four LLM conditions with a ±1-step smoothing window. The trajectory is flat from position 1 to 20, indicating that additional student history beyond the 5-interaction warm-up does not improve LLM predictions. The dashed blue line marks DKT's test AUC of 0.763 for reference. Right: reliability diagram showing systematic underconfidence in mid-range LLM predictions across all four conditions.*
+**Fig. 2** Left: per-position AUC pooled across all four LLM conditions with a ±1-step smoothing window. The trajectory is flat from position 1 to 20, indicating that additional student history beyond the 5-interaction warm-up does not improve LLM predictions. The dashed blue line marks DKT's test AUC of 0.763 for reference. Right: reliability diagram showing systematic underconfidence in mid-range LLM predictions across all four conditions
 
 #### 4.2.3 Probability-distribution anchoring
 
@@ -181,7 +181,7 @@ The miscalibration pattern in §4.2.2 points to a more specific phenomenon: LLMs
 
 By contrast, the sigmoid output of a neural KT model produces effectively continuous probabilities. Figure 3 plots the probability histograms for all four LLM conditions, showing the strong discretisation visually. Few-shot prompting amplifies the anchoring effect: the three in-context examples in our few-shot prompt use probabilities 0.85, 0.15, and 0.35, and the LLM's outputs disproportionately re-use those exact values and their close neighbours. For knowledge tracing specifically, this means that even a well-calibrated rank-ordering of students cannot be translated into well-calibrated probabilities suitable for downstream decision rules without an additional calibration step (e.g., Platt scaling on a held-out set).
 
-*Figure 3. Histograms of predicted probabilities across the four LLM conditions. Anchoring on multiples of 0.05 and 0.10 is visible in all four panels and is most extreme in GPT-4o-mini few-shot, which uses only 29 distinct probability values across 1,650 predictions.*
+**Fig. 3** Histograms of predicted probabilities across the four LLM conditions. Anchoring on multiples of 0.05 and 0.10 is visible in all four panels and is most extreme in GPT-4o-mini few-shot, which uses only 29 distinct probability values across 1,650 predictions
 
 #### 4.2.4 Inter-LLM agreement: evidence of a shared task ceiling
 
@@ -210,7 +210,7 @@ Two observations follow from these numbers. First, specialised KT models dominat
 
 Second, within the LLM region the cost differential is striking and not justified by accuracy: Haiku 4.5 is approximately 9–10 times more expensive per prediction than GPT-4o-mini while delivering AUC that is 0.008 to 0.012 lower. A practitioner constrained to LLM deployment for some reason (e.g., inability to host a local model, need for a shared API endpoint across many task types) would be strictly better off using the cheaper provider on this task. This finding is specific to knowledge tracing on ASSISTments-2009 and may not generalise to tasks where larger models would be expected to outperform — but it illustrates that LLM pricing does not track LLM-KT quality.
 
-*Figure 4. Cost vs. test AUC across all evaluated models. The four specialised KT models occupy the upper-left frontier (free, AUC 0.68–0.76). All four LLM conditions are dominated: lower AUC at strictly higher cost. Within the LLM region GPT-4o-mini achieves comparable or slightly higher AUC than Haiku 4.5 at roughly 1/9th to 1/10th the per-prediction cost.*
+**Fig. 4** Cost vs. test AUC across all evaluated models. The four specialised KT models occupy the upper-left frontier (free, AUC 0.68–0.76). All four LLM conditions are dominated: lower AUC at strictly higher cost. Within the LLM region GPT-4o-mini achieves comparable or slightly higher AUC than Haiku 4.5 at roughly 1/9th to 1/10th the per-prediction cost
 
 #### 4.2.6 Per-skill performance variance
 

@@ -2,9 +2,7 @@
 
 A reproducible benchmark comparing frontier LLMs (Anthropic Claude Haiku 4.5, OpenAI GPT-4o-mini)
 against four specialized Knowledge Tracing models on student performance prediction, using the
-real ASSISTments-2009 corrected dataset. Full writeup in [`paper_draft.md`](paper_draft.md);
-submission-ready manuscript in [`submission/`](submission/).
-
+real ASSISTments-2009 corrected dataset. 
 ## Project structure
 
 ```

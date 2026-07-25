@@ -131,13 +131,7 @@ after every API call, so interrupted runs resume automatically.
 
 ## Known limitations / open items before submission
 
-1. **Reproducibility:** `run_benchmark.py` seeds NumPy (`np.random.seed`) but not PyTorch, so
+**Reproducibility:** `run_benchmark.py` seeds NumPy (`np.random.seed`) but not PyTorch, so
    DKT/SAKT/AKT results vary slightly (~0.001–0.002 AUC) between runs of the same seed. Add
    `torch.manual_seed(args.seed)` in `main()` if bit-exact reproduction is required.
-2. **Acknowledgments** in `submission/title_page.docx` is still `[To be added]` — fill in if
-   applicable (advisors, funding sources beyond the "no specific grant" already stated, etc.).
 
-All 15 references in `paper_draft.md` have been independently verified against primary sources
-(see the "Reference verification status" note at the end of the references section); one
-mis-citation (Sonkar et al. 2024 — wrong venue and title) was found and corrected. Author and
-venue metadata in `submission/` are filled in.
